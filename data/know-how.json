@@ -1,0 +1,42 @@
+[
+  {
+    "id": "anthropic-eng-2026-03-25-auto-mode",
+    "author": "anthropic-engineering",
+    "published_at": "2026-03-25",
+    "source_url": "https://www.anthropic.com/engineering/claude-code-auto-mode",
+    "summary_ja": "Claude Code の auto-mode を有効にすると `claude auto-mode defaults` で設定を確認でき、ブロックルールを段階的にカスタマイズできる。危険操作を止める classifier が内蔵されていて、permission prompt をまとめてスキップする設計。",
+    "topics": ["auto-mode", "permission", "security", "classifier"]
+  },
+  {
+    "id": "anthropic-eng-2026-03-24-harness-design",
+    "author": "anthropic-engineering",
+    "published_at": "2026-03-24",
+    "source_url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+    "summary_ja": "planner / generator / evaluator を別エージェントに分けると、単一エージェントの自己評価の甘さが消え、長時間タスクの完成度が大幅に上がる。特に evaluator を独立させると \"確信を持って褒める\" 失敗が減る。",
+    "topics": ["multi-agent", "evaluator", "harness", "long-running-tasks"]
+  },
+  {
+    "id": "anthropic-eng-2025-10-20-sandboxing",
+    "author": "anthropic-engineering",
+    "published_at": "2025-10-20",
+    "source_url": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+    "summary_ja": "`/sandbox` コマンドで filesystem と network を隔離すると permission prompt が 84% 減り、Claude Code が安全に autonomous で走れる。bash 多用の skill / 自動ツール呼び出しの多いフローで効く。",
+    "topics": ["sandbox", "permission", "autonomy", "bash"]
+  },
+  {
+    "id": "anthropic-eng-2025-10-16-agent-skills",
+    "author": "anthropic-engineering",
+    "published_at": "2025-10-16",
+    "source_url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+    "summary_ja": "SKILL.md の frontmatter に name と description を書くと、agent は description だけを system prompt に load し、関連性判定で必要な時のみ本文を詳しく読む (progressive disclosure)。つまり description の質が skill 自動選定の精度をそのまま決める。",
+    "topics": ["skills", "frontmatter", "progressive-disclosure", "context-efficiency"]
+  },
+  {
+    "id": "anthropic-eng-2025-09-29-context-engineering",
+    "author": "anthropic-engineering",
+    "published_at": "2025-09-29",
+    "source_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+    "summary_ja": "全データを context に読ませず、軽量 ID (ファイルパス等) だけ保持して実行時にツールで動的 fetch する just-in-time 戦略を採ると、大規模 context で token 効率が上がる。Claude Code が大規模 DB 解析をこのパターンで回している。",
+    "topics": ["context-engineering", "just-in-time", "token-efficiency", "dynamic-loading"]
+  }
+]
